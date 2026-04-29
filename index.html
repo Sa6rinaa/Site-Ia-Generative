@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLORALIA — Plantes Rares & Vivantes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR CUSTOM -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-left">
+      <span class="header-tag">EST. 2024</span>
+    </div>
+    <div class="logo">FLORALIA</div>
+    <nav class="nav">
+      <a href="#catalogue">Catalogue</a>
+      <a href="#about">Botanica</a>
+      <button class="cart-btn" id="cart-btn">
+        Panier <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="leaf leaf-1">🌿</div>
+      <div class="leaf leaf-2">🍃</div>
+      <div class="leaf leaf-3">🌱</div>
+      <div class="leaf leaf-4">🌾</div>
+      <div class="noise-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Collection Printemps 2025</p>
+      <h1 class="hero-title">
+        Plantes<br/>
+        <em>extraordinaires</em><br/>
+        pour âmes<br/>
+        curieuses
+      </h1>
+      <p class="hero-desc">Chaque plante est sélectionnée à la main dans les serres<br/>les plus rares du monde. Livrée avec amour.</p>
+      <a href="#catalogue" class="hero-cta">Découvrir la collection</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- BANNER STRIP -->
+  <div class="strip">
+    <div class="strip-inner">
+      <span>🌿 Livraison gratuite dès 80€</span>
+      <span>✦</span>
+      <span>Garantie reprise 30 jours</span>
+      <span>✦</span>
+      <span>Cultivées sans pesticides</span>
+      <span>✦</span>
+      <span>🌱 1 plante achetée = 1 arbre planté</span>
+      <span>✦</span>
+      <span>Livraison gratuite dès 80€</span>
+      <span>✦</span>
+      <span>Garantie reprise 30 jours</span>
+      <span>✦</span>
+    </div>
+  </div>
+
+  <!-- CATALOGUE -->
+  <section class="catalogue" id="catalogue">
+    <div class="section-header">
+      <span class="section-label">— Notre Sélection</span>
+      <h2>La Boutique</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="tropicale">Tropicale</button>
+        <button class="filter-btn" data-filter="succulente">Succulente</button>
+        <button class="filter-btn" data-filter="rare">Ultra-Rare</button>
+        <button class="filter-btn" data-filter="aromatique">Aromatique</button>
+      </div>
+    </div>
+
+    <div class="product-grid" id="product-grid">
+      <!-- Produits générés par JS -->
+    </div>
+  </section>
+
+  <!-- ABOUT / BOTANICA -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <span class="section-label">— Notre Philosophie</span>
+      <h2>Le vivant<br/><em>d'abord</em></h2>
+      <p>Chez Floralia, chaque plante est une histoire. Nos botanistes parcourent les forêts tropicales, les déserts arides et les montagnes brumeuses pour vous apporter des spécimens uniques.</p>
+      <p>Notre intelligence artificielle botanique vous guide dans vos choix selon votre espace, votre lumière et votre style de vie.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat">
+        <span class="stat-number">340+</span>
+        <span class="stat-label">Espèces rares</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">12K</span>
+        <span class="stat-label">Clients heureux</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">98%</span>
+        <span class="stat-label">Satisfaction</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">5★</span>
+        <span class="stat-label">Note moyenne</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI ASSISTANT -->
+  <div class="ai-bubble" id="ai-bubble" title="Assistant Botanique IA">
+    <span class="ai-icon">🌿</span>
+    <span class="ai-pulse"></span>
+  </div>
+
+  <div class="ai-panel" id="ai-panel">
+    <div class="ai-header">
+      <div class="ai-title">
+        <span class="ai-dot"></span>
+        Assistant Botanique IA
+      </div>
+      <button class="ai-close" id="ai-close">✕</button>
+    </div>
+    <div class="ai-messages" id="ai-messages">
+      <div class="ai-msg ai-msg--bot">
+        <div class="ai-avatar">🌿</div>
+        <div class="ai-bubble-msg">Bonjour ! Je suis votre guide botanique personnel. Dites-moi quel type de plante vous cherchez, votre espace disponible ou votre niveau d'expérience — je vous ferai des recommandations sur mesure !</div>
+      </div>
+    </div>
+    <div class="ai-suggestions">
+      <button class="ai-suggestion" data-msg="J'ai peu de lumière chez moi">Peu de lumière 🌑</button>
+      <button class="ai-suggestion" data-msg="Je suis débutant en jardinage">Débutant 🌱</button>
+      <button class="ai-suggestion" data-msg="Je veux une plante rare et spectaculaire">Plante rare 💎</button>
+      <button class="ai-suggestion" data-msg="J'ai des animaux domestiques, quelle plante choisir ?">Avec animaux 🐱</button>
+    </div>
+    <div class="ai-input-row">
+      <input type="text" id="ai-input" placeholder="Posez votre question botanique…" autocomplete="off" />
+      <button id="ai-send">↑</button>
+    </div>
+  </div>
+
+  <!-- CART PANEL -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h3>Votre Panier</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">Votre panier est vide 🌿</div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-price">0 €</span>
+      </div>
+      <button class="checkout-btn">Commander →</button>
+    </div>
+  </div>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">FLORALIA</div>
+        <p>Le vivant d'abord.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Boutique</h4>
+          <a href="#">Catalogue</a>
+          <a href="#">Nouveautés</a>
+          <a href="#">Promotions</a>
+        </div>
+        <div>
+          <h4>Service</h4>
+          <a href="#">Livraison</a>
+          <a href="#">Retours</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Floralia — Tous droits réservés</span>
+      <span>Made with 🌿 & IA</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
